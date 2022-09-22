@@ -32,13 +32,18 @@ class LinkedList:
 
     def mult(self, mult):
         P = self.PTR
+        Pr=P
         mult=1
         num=""
-        while(P != None):
+        while(Pr!=None):
+            x=0
             for i in P.data:
-                num= num+ str(P.data[i-1])
+                print(i)
+                num= num+ str(P.data[x])
+                x=x+1
             mult = (int(mult) * int(num))
             P = P.next
+            Pr=P
             num=""
         new_mult=mult
         numero = [int(a) for a in str(new_mult)]
@@ -53,6 +58,6 @@ class LinkedList:
         while(P != None):
             respuesta = respuesta + str(P.data) + "->"
             P = P.next
-        respuesta = respuesta + "None"
+        respuesta = respuesta+ "None"
         return respuesta   
 
