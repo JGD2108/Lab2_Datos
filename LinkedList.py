@@ -18,8 +18,11 @@ class LinkedList:
         suma=0
         num=""
         while(P != None):
+            x=0
             for i in P.data:
-                num= num+ str(P.data[i-1])
+                print(i)
+                num = num+ str(P.data[x])
+                x=x+1
             suma = (int(suma) + int(num))
             P = P.next
             num=""
@@ -41,12 +44,23 @@ class LinkedList:
                 print(i)
                 num= num+ str(P.data[x])
                 x=x+1
+            print(num)
             mult = (int(mult) * int(num))
             P = P.next
             Pr=P
             num=""
         new_mult=mult
-        numero = [int(a) for a in str(new_mult)]
+        number=1
+        numero= []
+        for a in str(new_mult):
+            number2 = a
+            print(number2)
+            if "-" in a:
+                number=-1
+            else:
+                numero.append(number*int(a))
+                number=1
+        ##numero = [int(a) for a in str(new_mult)]
         resultado = LinkedList()
         for w in range(len(numero)):
             resultado.AddNode(numero[w])

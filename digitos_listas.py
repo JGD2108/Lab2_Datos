@@ -14,11 +14,25 @@ class Sistema:
         sw = 0
         while(sw==0):
             numero= input("Digite el numero:")
-            if numero.isnumeric():
+            numero = int(numero)
+            numerot = abs(numero)
+            numerot= str(numerot)
+            if numerot.isnumeric():
                 sw=1
             else:
                 print("digite un numero valido")
-        x = [int(a) for a in str(numero)]
+        x= []
+        number=1
+        for a in str(numero):
+            number2 = a
+            print(number2)
+            if "-" in a:
+                number=-1
+            else:
+                x.append(number*int(a))
+                number=1
+        print(x)
+        ##x = [int(a) for a in str(numero)]
         lista.AddNode(x)
         print(lista)
 
@@ -30,11 +44,3 @@ class Sistema:
     else: 
         mult=1
         lista.mult(mult)
-        
-
-      
-
-        
-        
-
-
