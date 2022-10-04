@@ -15,6 +15,9 @@ class Sistema:
         while(sw==0):
             try:
                 numero= input("Digite el numero:")
+                while(len(numero)>100):
+                    print("Solo se aceptan numeros de maximo 100 dígitos")
+                    numero= input("Digite el numero:")
                 numero = int(numero)
                 sw=1
             except ValueError:

@@ -72,7 +72,7 @@ class LinkedList:
         respuesta = ""
         P = self.PTR
         while(P != None):
-            respuesta = respuesta + str(P.data) + "->"
+            respuesta = respuesta + str(P.data) + "(->)"
             P = P.next
         respuesta = respuesta+ "None"
         return respuesta   
