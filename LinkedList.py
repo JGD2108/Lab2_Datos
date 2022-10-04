@@ -20,18 +20,20 @@ class LinkedList:
         while(P != None):
             x=0
             for i in P.data:
-                print(i)
                 num = num+ str(P.data[x])
                 x=x+1
             suma = (int(suma) + int(num))
             P = P.next
             num=""
         new_sum=suma
-        numero = [int(a) for a in str(new_sum)]
+        print(new_sum)
+        suma= str(new_sum)
+        numero = [(a) for a in str(new_sum)]
+        print(numero)
         resultado = LinkedList()
         for w in range(len(numero)):
             resultado.AddNode(numero[w])
-        print(resultado)
+            print(resultado)
 
     def mult(self, mult):
         P = self.PTR

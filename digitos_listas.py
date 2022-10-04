@@ -13,14 +13,12 @@ class Sistema:
     for i in range(tam):
         sw = 0
         while(sw==0):
-            numero= input("Digite el numero:")
-            numero = int(numero)
-            numerot = abs(numero)
-            numerot= str(numerot)
-            if numerot.isnumeric():
+            try:
+                numero= input("Digite el numero:")
+                numero = int(numero)
                 sw=1
-            else:
-                print("digite un numero valido")
+            except ValueError:
+                print("digite un numero")
         x= []
         number=1
         for a in str(numero):
